@@ -76,7 +76,7 @@ class SQLiteHelper {
     var infoCarModels = <InfoCarModel>[];
 
     List<Map<String, dynamic>> maps = await database.query(tableInfo);
-    if (maps.isEmpty) {
+    if (maps.isNotEmpty) {
       for (var item in maps) {
         InfoCarModel infoCarModel = InfoCarModel.fromMap(item);
         infoCarModels.add(infoCarModel);
